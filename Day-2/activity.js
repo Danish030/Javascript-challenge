@@ -33,5 +33,5 @@ console.log("ek sahi hona chaiye ||",a>b && res>res1) //one condition is true,so
 console.log('!galat hai iska mtlv',!(res<res1)) // here res1 is greater which is true, s it will print false
 
 // activity 5
-let tern = (a>b)? console.log('sahi hai') : console.log('galat hai') //a = 9 , b=6
-let tern1 = (a<b)? console.log('sahi hai') : console.log('galat hai') //a = 9 , b=6
+let tern = (a>0)? console.log('positive') : console.log('negative') //a = 9 
+let tern1 = (a<0)? console.log('positive') : console.log('negative') //a = 9
