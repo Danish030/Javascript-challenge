@@ -1,0 +1,6 @@
+function concatestring( str1, str2){
+let res = str1+str2
+console.log(res)
+}
+
+concatestring('Hello',' js')
