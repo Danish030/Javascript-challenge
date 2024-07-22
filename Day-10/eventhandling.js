@@ -89,3 +89,4 @@ function addItems(){
 let addItembtn = document.getElementById("addBtn");
 addItembtn.addEventListener("click", addItems)
 
+// Done all the activity
