@@ -84,36 +84,13 @@
 
 // Activity 4
 
-function getRandomOutcome() {
-    return new Promise((resolve, reject) => {
-        const randomNumber = Math.random();
-        console.log(`Generated random number: ${randomNumber.toFixed(2)}`);
-
-        // Let's assume a 50% chance to resolve or reject
-        if (randomNumber > 0.5) {
-            resolve('The promise was successfully resolved!');
-        } else {
-            reject(new Error('The promise was rejected.'));
-        }
-    });
-}
-
-// Use the promise
-getRandomOutcome()
-    .then(result => {
-        console.log('Success:', result);
-    })
-    .catch(error => {
-        console.error('Failure:', error.message);
-    });
-
 
     function getRandomOutcome() {
         return new Promise((resolve, reject) => {
             const randomNumber = Math.random();
             console.log(`Generated random number: ${randomNumber.toFixed(2)}`);
     
-            // 50% chance to resolve or reject
+           
             if (randomNumber > 0.5) {
                 resolve('The promise was successfully resolved!');
             } else {
@@ -131,17 +108,17 @@ getRandomOutcome()
         }
     }
     
-    // Call the async function
+
     handleRandomOutcome();
 
     // Activity 5
-    // Invalid URL to demonstrate error handling
+  
 const invalidURL = 'https://example.invalid/api/data';
 
 fetch(invalidURL)
     .then(response => {
         if (!response.ok) {
-            // Check for specific HTTP status codes and provide custom messages
+   
             switch (response.status) {
                 case 404:
                     throw new Error('Resource not found (404).');
@@ -157,32 +134,31 @@ fetch(invalidURL)
         console.log('Data received:', data);
     })
     .catch(error => {
-        // Log detailed error messages
+
         console.error('Fetch error:', error.message);
 
-        // Additional logic can be added here to retry the request, show a user-friendly message, etc.
     });
 
-    // Async function to fetch data from an invalid URL
+
 async function fetchDataFromInvalidURL() {
     const invalidURL = 'https://example.invalid/api/data';
 
     try {
         const response = await fetch(invalidURL);
 
-        // Check if the response is successful
+
         if (!response.ok) {
             throw new Error(`Network response was not ok. Status Code: ${response.status}`);
         }
 
-        const data = await response.json(); // Parse the JSON from the response
+        const data = await response.json(); 
         console.log('Data received:', data);
 
     } catch (error) {
-        // Handle errors (network errors or parsing errors)
+
         console.error('Fetch error:', error.message);
     }
 }
 
-// Call the async function
+
 fetchDataFromInvalidURL();
