@@ -1,0 +1,10 @@
+{
+    "name": "your-project",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "my_module.js",
+    "dependencies": {
+        "axios": "^1.7.2",
+        "lodash": "^4.17.21"
+    }
+}
